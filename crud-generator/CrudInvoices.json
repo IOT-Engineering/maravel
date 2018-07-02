@@ -1,0 +1,117 @@
+{
+  "fields": [
+    {
+      "name": "invoice_number",
+      "type": "string"
+    },
+    {
+      "name": "company_name",
+      "type": "string"
+    },
+    {
+      "name": "company_nif",
+      "type": "string"
+    },
+    {
+      "name": "company_address",
+      "type": "string"
+    },
+    {
+      "name": "client_name",
+      "type": "string"
+    },
+    {
+      "name": "client_nif",
+      "type": "string"
+    },
+    {
+      "name": "client_country",
+      "type": "string"
+    },
+    {
+      "name": "client_city",
+      "type": "string"
+    },
+    {
+      "name": "client_cp",
+      "type": "string"
+    },
+    {
+      "name": "client_address",
+      "type": "string"
+    },
+    {
+      "name": "date",
+      "type": "date"
+    },
+    {
+      "name": "due_date",
+      "type": "date"
+    },
+    {
+      "name": "draft",
+      "type": "boolean"
+    },
+    {
+      "name": "send",
+      "type": "boolean"
+    },
+    {
+      "name": "paid_percent",
+      "type": "double"
+    },
+    {
+      "name": "category_id",
+      "type": "integer#unsigned"
+    }
+  ],
+  "foreign_keys": [
+    {
+      "column": "category_id",
+      "references": "id",
+      "on": "categories"
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Category",
+      "type": "belongsTo",
+      "class": "App\\Category"
+    },
+    {
+      "name": "InvoiceLine",
+      "type": "hasMany",
+      "class": "App\\InvoiceLine"
+    }
+  ],
+  "validations": [
+    {
+      "field": "company_name",
+      "rules": "required|max:32"
+    },
+    {
+      "field": "company_nif",
+      "rules": "required|max:32"
+    },
+    {
+      "field": "company_address",
+      "rules": "required|max:32"
+    },
+    {
+      "field": "client_nif",
+      "rules": "required|max:32"
+    },
+    {
+      "field": "client_country",
+      "rules": "required|max:32"
+    },
+    {
+      "field": "client_city",
+      "rules": "required|max:32"
+    },
+    {
+      "field": "client_address",
+      "rules": "required|max:255"
+    }
+  ]
+}

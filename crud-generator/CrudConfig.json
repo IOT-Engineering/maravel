@@ -1,0 +1,90 @@
+{
+  "fields": [
+    {
+      "name": "invoice_prefix",
+      "type": "string"
+    },
+    {
+      "name": "invoice_next_id",
+      "type": "integer#unsigned"
+    },
+    {
+      "name": "company_logo",
+      "type": "string"
+    },
+    {
+      "name": "company_name",
+      "type": "string"
+    },
+    {
+      "name": "company_nif",
+      "type": "string"
+    },
+    {
+      "name": "company_bank_account",
+      "type": "string"
+    },
+    {
+      "name": "product_model",
+      "type": "string"
+    },
+    {
+      "name": "product_model_col_name",
+      "type": "string"
+    },
+    {
+      "name": "product_model_col_price",
+      "type": "string"
+    },
+    {
+      "name": "product_model_col_tax",
+      "type": "string"
+    },
+    {
+      "name": "product_model_col_description",
+      "type": "string"
+    },
+    {
+      "name": "client_model",
+      "type": "string"
+    },
+    {
+      "name": "client_model_col_name",
+      "type": "string"
+    },
+    {
+      "name": "client_model_col_nif",
+      "type": "string"
+    },
+    {
+      "name": "client_model_col_address",
+      "type": "string"
+    },
+    {
+      "name": "client_model_col_cp",
+      "type": "string"
+    },
+    {
+      "name": "client_model_col_city",
+      "type": "string"
+    },
+    {
+      "name": "client_model_col_country",
+      "type": "string"
+    }
+  ],
+  "validations": [
+    {
+      "field": "invoice_next_id",
+      "rules": "required|min:0"
+    },
+    {
+      "field": "company_name",
+      "rules": "required|max:64"
+    },
+    {
+      "field": "company_nif",
+      "rules": "required|max:32"
+    }
+  ]
+}

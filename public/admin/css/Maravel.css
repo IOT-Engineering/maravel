@@ -1,0 +1,63 @@
+.box {
+  position: relative;
+  background: #ffffff;
+  border-radius: 0;
+  border-top: 0px solid #777777;
+  margin-bottom: 20px;
+  width: 100%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-header
+{
+  background-color: whitesmoke;
+
+}
+.box-header .box-title
+{
+  font-size: 18px;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+
+.btn {
+  border-radius: 1px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid transparent;
+}
+
+.content-header {
+  position: relative;
+  padding: 15px;
+  background-color: #d2d6de;
+}
+
+.page-title{
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+ul.alert{
+  list-style-type: none;
+}
+
+.flash-message
+{
+  width: 20%;
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  z-index: 1200;
+}
+
+.logo-mini, .logo-lg
+{
+  color: #dd4b39;
+}
+
+.no-margin{
+  margin: 0 !important;
+}

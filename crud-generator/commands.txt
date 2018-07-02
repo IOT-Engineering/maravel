@@ -1,0 +1,1 @@
+php artisan crud:generate Invoices --fields_from_file="crud-generator/CrudInvoices.json" --view-path="dashboard/Accounting" --controller-namespace=Accounting --form-helper=adminLTE

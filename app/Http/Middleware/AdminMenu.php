@@ -63,12 +63,12 @@ class AdminMenu
                                 $subSub->url('admin/users/create', 'Añadir Usuario', 2, ['icon' => 'fa fa-plus']);
                             }
         
-                        }, 1, ['icon' => 'fa fa-angle-double-right']);
+                        });
                     }
                     
                     if ($user->canView('admin/roles')) 
                     {
-                        $sub->url('admin/roles', 'Roles y Permisos', 2, ['icon' =>'fa fa-angle-double-right']);
+                        $sub->url('admin/roles', 'Roles y Permisos');
                     }
 
                 }, 2, [
@@ -84,10 +84,10 @@ class AdminMenu
                 {
                     if($user->canView('admin/config'))
                     {
-                        $sub->url('admin/config', 'General', 1, ['icon' =>'fa fa-angle-double-right']);
+                        $sub->url('admin/config', 'General');
                     }
 
-                }, 3, [
+                }, 99, [
                     'title' => 'Configuración',
                     'icon' => 'fa fa-gears',
                 ]);

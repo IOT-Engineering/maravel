@@ -8,11 +8,6 @@
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.box-header
-{
-  background-color: whitesmoke;
-
-}
 .box-header .box-title
 {
   font-size: 18px;
@@ -60,4 +55,41 @@ ul.alert{
 
 .no-margin{
   margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right) {
+    display: block !important;
+    position: fixed;
+    width: 250px;
+    top: 50px;
+    left: 53px;
+    font-size: 1.3em;
+    background-color: lightgrey;
+  }
+
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+    display: block !important;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 100px;
+    left: 50px;
+  }
+
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
+    position: fixed !important;
+    float: right;
+    width: auto !important;
+    left: 250px !important;
+    top: -22px !important;
+    z-index: 900;
+  }
+
+}
+
+.margin-bottom-sm
+{
+  margin-bottom: 15px;
 }

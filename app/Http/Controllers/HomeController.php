@@ -8,6 +8,7 @@ use App\Events\BlockCreated;
 use App\Maravel\Blocks\Block;
 use App\Maravel\BlockItem;
 use App\Maravel\Blocks\BlockComponent;
+use App\Maravel\Traits\Files;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -17,6 +18,8 @@ use Modules\Accounting\Http\Controllers\CategoriesController;
 
 class HomeController extends Controller
 {
+    use Files;
+    
     /**
      * Create a new controller instance.
      *
@@ -112,8 +115,6 @@ class HomeController extends Controller
         ]);
         
         $requestData = $request->all();
-
-        Log::info($requestData);
         
         Dashboard::create(['user_id' => Auth::user()->id, 
             'vendor'=> $requestData['vendor'],
@@ -150,5 +151,6 @@ class HomeController extends Controller
     
         return json_encode(['okay' => 1]);
     }
+    
     
 }

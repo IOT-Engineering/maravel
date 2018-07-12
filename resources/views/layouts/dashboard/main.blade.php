@@ -22,6 +22,8 @@
         <link rel="stylesheet" href="{{env('APP_URL')}}/css/skins/skin-elegant.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}/css/Maravel.css">
 
+        @stack('script')
+
     </head>
 
     <body class="hold-transition skin-elegant sidebar-mini sidebar-collapse">

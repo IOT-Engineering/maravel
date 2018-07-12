@@ -133,7 +133,7 @@ return [
     */
 
     'scan' => [
-        'enabled' => false,
+        'enabled' => true,
         'paths' => [
             base_path('vendor/*/*'),
         ],
@@ -148,10 +148,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'Cloudware-Square',
+        'vendor' => 'ioteng',
         'author' => [
-            'name' => 'Cloudware-Square',
-            'email' => 'info@cloudware-studio.com',
+            'name' => 'IoT-Engineering',
+            'email' => 'info@iot-eng.com',
         ],
     ],
     /*

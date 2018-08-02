@@ -38,7 +38,11 @@
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="{{env('APP_URL')}}/img/dashboard/avatar.png" class="img-circle" alt="User Image">
+                            @if(file_exists(env('APP_URL').'/img/dashboard/avatar.png'))
+                                <img src="{{env('APP_URL')}}/img/dashboard/avatar.png" class="img-circle" alt="User Image">
+                            @else
+                                <br><br>
+                            @endif
                             <p>
                                 <span class="hidden-xs">{{Auth::user()->name}}</span>
                             </p>

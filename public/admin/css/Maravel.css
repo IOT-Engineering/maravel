@@ -6,6 +6,8 @@
   margin-bottom: 20px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  overflow-y: visible;
+
 }
 
 .box-header .box-title
@@ -15,6 +17,10 @@
   font-weight: 600;
 }
 
+.box-body
+{
+  overflow-y: visible;
+}
 
 .btn {
   border-radius: 1px;
@@ -57,39 +63,86 @@ ul.alert{
   margin: 0 !important;
 }
 
-@media (min-width: 768px) {
-
-  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right) {
-    display: block !important;
-    position: fixed;
-    width: 250px;
-    top: 50px;
-    left: 53px;
-    font-size: 1.3em;
-    background-color: lightgrey;
-  }
-
-  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
-    display: block !important;
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    top: 100px;
-    left: 50px;
-  }
-
-  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
-    position: fixed !important;
-    float: right;
-    width: auto !important;
-    left: 250px !important;
-    top: -22px !important;
-    z-index: 900;
-  }
-
-}
 
 .margin-bottom-sm
 {
   margin-bottom: 15px;
+}
+
+
+.dropdown-menu>li>form>button{
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  color: #777;
+  border: none;
+  width: 100%;
+  text-align: left;
+  background: white;
+
+}
+.dropdown-menu>li>form>button:hover{
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  white-space: nowrap;
+  color: #000000;
+  border: none;
+  background: #e1e3e9;
+}
+.dropdown-menu>li>form>button>i.fa{
+  margin-right: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span {
+      top: 0;
+      margin-left: -3px;
+      padding: 12px 5px 14px 20px;
+      background-color: inherit;
+  }
+  /*!
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right) {
+      display: block !important;
+      position: fixed;
+      width: 250px;
+      top: 50px;
+      left: 53px;
+      font-size: 1.3em;
+      background-color: lightgrey;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+      display: block !important;
+      position: fixed;
+      width: 250px;
+      height: 100%;
+      top: 100px;
+      left: 50px;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
+      position: fixed !important;
+      float: right;
+      width: auto !important;
+      left: 250px !important;
+      top: -22px !important;
+      z-index: 900;
+    }
+      !*/
+
+}
+
+@media screen and (max-width: 767px) {
+  .box-body
+  {
+    overflow-x: scroll;
+  }
 }

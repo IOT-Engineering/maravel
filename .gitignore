@@ -12,3 +12,5 @@ yarn-error.log
 .env
 /modules
 /crud-generator
+/resources/crud-generator
+public/modules

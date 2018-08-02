@@ -5,7 +5,11 @@
         <div class="user-panel">
 
             <div class="pull-left image">
-                <img src="{{env('APP_URL')}}/img/dashboard/avatar.png" class="img-circle" alt="User Image">
+                @if(file_exists(env('APP_URL').'/img/dashboard/avatar.png'))
+                    <img src="{{env('APP_URL')}}/img/dashboard/avatar.png" class="img-circle" alt="User Image">
+                @else
+                    <br><br>
+                @endif
             </div>
 
             @if(Auth::check())

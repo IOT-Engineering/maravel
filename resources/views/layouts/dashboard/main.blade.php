@@ -12,15 +12,15 @@
         <meta content="width=device-width, initial-scale=0.75, maximum-scale=1, user-scalable=yes" name="viewport">
 
         <!-- Bootstrap 3.3.6 -->
-        <link rel="stylesheet" href="{{env('APP_URL')}}/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/admin/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
         @stack('css')
 
-        <link rel="stylesheet" href="{{env('APP_URL')}}/css/AdminLTE.css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/css/skins/skin-elegant.css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}/css/Maravel.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/AdminLTE.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/skins/skin-elegant.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/Maravel.css">
 
         @stack('script')
 
@@ -57,14 +57,14 @@
         @endif
 
         <!-- jQuery library -->
-        <script src="{{env('APP_URL')}}/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="{{env('APP_URL')}}/admin/vendor/jquery/jquery-3.2.1.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="{{env('APP_URL')}}/vendor/colorpicker/bootstrap-colorpicker.min.js"></script>
+        <script src="{{env('APP_URL')}}/admin/vendor/colorpicker/bootstrap-colorpicker.min.js"></script>
 
         <!-- AdminLTE App -->
-        <script src="{{env('APP_URL')}}/js/app.js"></script>
+        <script src="{{env('APP_URL')}}/admin/js/app.js"></script>
 
         @stack('js')
 

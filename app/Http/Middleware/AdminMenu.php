@@ -43,6 +43,7 @@ class AdminMenu
                 'order' => 1,
             ]);
 
+            
             // Items
             if($user->canView('admin/users') || $user->canView('admin/roles/create') || $user->canView('admin/roles') )
             {

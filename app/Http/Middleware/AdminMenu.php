@@ -79,21 +79,6 @@ class AdminMenu
 
             }
 
-            if($user->canView('admin/config'))
-            {
-                $menu->dropdown('Configuración', function ($sub) use($user, $attr)
-                {
-                    if($user->canView('admin/config'))
-                    {
-                        $sub->url('admin/config', 'General');
-                    }
-
-                }, 99, [
-                    'title' => 'Configuración',
-                    'icon' => 'fa fa-gears',
-                ]);
-            }
-
             // Fire the event to extend the menu
             event(new AdminMenuCreated($menu));
         });

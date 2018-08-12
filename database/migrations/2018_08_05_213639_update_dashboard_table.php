@@ -16,7 +16,7 @@ class UpdateDashboardTable extends Migration
         Schema::table('dashboard', function(Blueprint $table)
         {
             $table->dropUnique('function');
-            $table->unique(['controller', 'function']);
+            $table->unique(['user_id','controller', 'function']);
         });
     
     

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateDashboardTable extends Migration
+class UpdateDashboardUniqueFieldTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,13 +15,11 @@ class UpdateDashboardTable extends Migration
     {
         Schema::table('dashboard', function(Blueprint $table)
         {
-            $table->dropUnique('function');
-            $table->unique(['controller', 'function']);
+            $table->dropUnique('controller_function');
+            $table->unique(['user_id','controller', 'function']);
         });
-    
-    
     }
-
+    
     /**
      * Reverse the migrations.
      *
@@ -31,8 +29,8 @@ class UpdateDashboardTable extends Migration
     {
         Schema::table('dashboard', function(Blueprint $table)
         {
-            $table->dropUnique(['controller_function']);
-            $table->unique('controller', 'function');
+            $table->dropUnique(['user_id_controller_function']);
+            $table->unique(['controller', 'function']);
         });
     }
 }

@@ -15,7 +15,7 @@ class UpdateDashboardUniqueFieldTable extends Migration
     {
         Schema::table('dashboard', function(Blueprint $table)
         {
-            //$table->dropUnique('controller_function');
+            $table->dropUnique('controller_function');
             $table->unique(['user_id','controller', 'function']);
         });
     }

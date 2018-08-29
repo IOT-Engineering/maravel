@@ -14,3 +14,4 @@ yarn-error.log
 /crud-generator
 /resources/crud-generator
 public/modules
+composer.lock

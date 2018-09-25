@@ -15,5 +15,4 @@ yarn-error.log
 /resources/crud-generator
 public/modules
 composer.lock
-*.DS_Store
 config/database.php

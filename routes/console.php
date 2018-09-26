@@ -21,3 +21,8 @@ Artisan::command('inspire', function () {
 Artisan::command('upload-check', function () {
     FtpController::uploadCheck();
 })->describe('Check the uploads of ftp users');
+
+Artisan::command('db-import', function () {
+    FtpController::dbImport();
+})->describe('Import de database to local SQL Server');
+

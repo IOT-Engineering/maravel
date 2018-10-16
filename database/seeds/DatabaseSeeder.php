@@ -23,6 +23,5 @@ class DatabaseSeeder extends Seeder
              'password' => 'secret',
              'role_id' => $rol->id,
              'remember_token' => str_random(10)]);
-    
     }
 }

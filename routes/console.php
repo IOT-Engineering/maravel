@@ -26,3 +26,6 @@ Artisan::command('db-import', function () {
     FtpController::dbImport();
 })->describe('Import de database to local SQL Server');
 
+Artisan::command('import-check', function () {
+    FtpController::importCheck();
+})->describe('Send mail if fail');

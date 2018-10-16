@@ -14,3 +14,6 @@ yarn-error.log
 /crud-generator
 /resources/crud-generator
 public/modules
+Modules
+config/database.php
+public/Resources/

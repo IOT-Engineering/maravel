@@ -22,7 +22,7 @@ class CreateConfigsTable extends Migration
             $table->string('module', 1024);
             $table->string('key', 1024);
             $table->string('value', 1024);
-    
+            
             $table->unique(array('vendor', 'module','key','user_id'));
     
         });

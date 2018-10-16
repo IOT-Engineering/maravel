@@ -20,12 +20,12 @@ Artisan::command('inspire', function () {
 
 Artisan::command('upload-check', function () {
     FtpController::uploadCheck();
-})->describe('Check the uploads of ftp users');
+})->describe('Check the uploads of ftp users (each 10 minuts)');
 
 Artisan::command('db-import', function () {
     FtpController::dbImport();
-})->describe('Import de database to local SQL Server');
+})->describe('Import de database to local SQL Server (each minut)');
 
 Artisan::command('import-check', function () {
     FtpController::importCheck();
-})->describe('Send mail if fail');
+})->describe('Send mail if fail (at 23:55)');

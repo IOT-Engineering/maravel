@@ -27,10 +27,6 @@ class MaravelAuth
 
             if (Gate::denies('maravel-auth', $route))
             {
-                Log::info("Access Denied");
-
-                Log::info("User:". (string)Auth::user()->id);
-                Log::info("Route:". $route);
 
                 return abort(403, 'Unauthorized action.');
             }

@@ -33,6 +33,14 @@ class Kernel extends ConsoleKernel
             (new \Modules\DataDump\Http\Controllers\DataDumpController())->loop();
         })->dailyAt('06:00');
 
+        $schedule->command('upload-check')
+            ->hourly();
+
+        $schedule->command('db-import')
+            ->everyMinute();
+
+        $schedule->command('import-check')
+            ->dailyAt('23:55');
     }
 
     /**

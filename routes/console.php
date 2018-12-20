@@ -2,6 +2,7 @@
 
 use Illuminate\Foundation\Inspiring;
 use Modules\Ftp\Http\Controllers\FtpController;
+use Modules\DataDump\Http\Controllers\DataDumpController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,3 +40,17 @@ Artisan::command('test-email', function () {
     array_push($emails, 'informatica@fitnesskpi.com');
     FtpController::sendEmail($emails, 'corruptedDb');
 })->describe('Probando emails');
+
+Artisan::command('datadump', function () {
+    $controller = new DataDumpController();
+    $controller->loop();
+})->describe('datadump all active clubs');
+
+Artisan::command('test-datadump', function () {
+    $controller = new DataDumpController();
+    $controller->testApi();
+})->describe('test datadump');
+
+Artisan::command("dump-club {id} {place}", function ($id, $place) {
+    (new Modules\DataDump\Http\Controllers\DataDumpController)->dumpTo($id, $place);
+})->describe('Volcar datos a producción o pre-producción');

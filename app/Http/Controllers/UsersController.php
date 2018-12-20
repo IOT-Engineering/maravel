@@ -22,14 +22,16 @@ class UsersController extends Controller
     {
         $keyword = $request->get('search');
         $perPage = 25;
-
-        if (!empty($keyword)) {
+        
+        if (!empty($keyword))
+        {
             $users = User::where('name', 'LIKE', "%$keyword%")
                 ->orWhere('email', 'LIKE', "%$keyword%")
                 ->orWhere('password', 'LIKE', "%$keyword%")
                 ->paginate($perPage);
-        } else {
-            
+        }
+        else
+        {
             $users = User::paginate($perPage);
         }
 

@@ -16,7 +16,8 @@
         "laravel/tinker": "~1.0",
         "nesbot/carbon": "1.31.*",
         "nwidart/laravel-menus": "^1.0",
-        "nwidart/laravel-modules": "^3.2"
+        "nwidart/laravel-modules": "^3.2",
+        "symfony/process": "~3.3"
     },
     "require-dev": {
         "filp/whoops": "~2.0",

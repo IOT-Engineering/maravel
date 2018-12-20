@@ -29,3 +29,13 @@ Artisan::command('db-import', function () {
 Artisan::command('import-check', function () {
     FtpController::importCheck();
 })->describe('Send mail if fail (at 23:55)');
+
+Artisan::command('test-api', function () {
+    (new Modules\DataDump\Http\Controllers\DataDumpController)->loop();
+})->describe('Consultas de accesos');
+
+Artisan::command('test-email', function () {
+    $emails = array();
+    array_push($emails, 'informatica@fitnesskpi.com');
+    FtpController::sendEmail($emails, 'corruptedDb');
+})->describe('Probando emails');

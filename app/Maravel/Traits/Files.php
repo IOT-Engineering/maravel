@@ -14,14 +14,13 @@ trait Files
     {
         if($file != null)
         {
+
             if($filename==null)
             {
                 $filename = $file->getClientOriginalName();
             }
-
-            $route = 'public/'.$path;
-            
-            Storage::putFileAs($route, $file, $filename);
+         
+            Storage::putFileAs($path, $file, $filename);
 
             return 1;
         }

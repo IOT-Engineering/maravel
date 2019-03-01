@@ -33,13 +33,13 @@ class Kernel extends ConsoleKernel
             (new \Modules\DataDump\Http\Controllers\DataDumpController())->loop();
         })->dailyAt('06:00');
 
-        $schedule->command('upload-check')
+        $schedule->command('ftp:check-upload')
             ->hourly();
 
-        $schedule->command('db-import')
+        $schedule->command('ftp:import')
             ->everyMinute();
 
-        $schedule->command('import-check')
+        $schedule->command('ftp:check-import')
             ->dailyAt('23:55');
     }
 

@@ -54,7 +54,7 @@ class Kernel extends ConsoleKernel
 
             $finder->sortByName();
             $count = count($finder);
-            Log::warning('Número de copias: '.$count);
+            Log::warning('Number of copies: '.$count);
 
             foreach ($finder as $dump) {
                 $fileName = $dump->getFilename();
@@ -65,7 +65,7 @@ class Kernel extends ConsoleKernel
                 }
             };
 
-        })->name('deleteOldDumps')->dailyAt('23:59');
+        })->name('delete old dumps')->dailyAt('23:59');
     }
 
     /**

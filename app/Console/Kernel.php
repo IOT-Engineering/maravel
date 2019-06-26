@@ -6,6 +6,10 @@ use
 
     Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
+use Symfony\Component\Finder\Finder;
 
 class Kernel extends ConsoleKernel
 {
@@ -41,6 +45,27 @@ class Kernel extends ConsoleKernel
 
         $schedule->command('ftp:check-import')
             ->dailyAt('23:55');
+
+        // Delete old backups
+        $schedule->call(function () {
+
+            $finder = new Finder();
+            $finder->files()->in(Config::get('db-backup.path'));
+
+            $finder->sortByName();
+            $count = count($finder);
+            Log::warning('Número de copias: '.$count);
+
+            foreach ($finder as $dump) {
+                $fileName = $dump->getFilename();
+                if ($count > 5) {
+                    $path = storage_path() . '/dumps/' . $fileName;
+                    File::delete($path);
+                    $count--;
+                }
+            };
+
+        })->name('deleteOldDumps')->dailyAt('23:59');
     }
 
     /**

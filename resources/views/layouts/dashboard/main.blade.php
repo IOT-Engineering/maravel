@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/AdminLTE.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/skins/skin-elegant.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/Maravel.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/DataTables/datatables.min.css">
 
         @stack('script')
 
@@ -58,6 +59,7 @@
 
         <!-- jQuery library -->
         <script src="{{env('APP_URL')}}/admin/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="{{env('APP_URL')}}/admin/vendor/DataTables/datatables.min.js"></script>
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

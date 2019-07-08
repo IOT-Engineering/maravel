@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/AdminLTE.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/skins/skin-elegant.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}/admin/css/Maravel.css">
-        <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>">
+        <link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
 
         @stack('script')
 

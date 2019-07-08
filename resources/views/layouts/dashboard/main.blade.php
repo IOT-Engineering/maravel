@@ -78,7 +78,7 @@
                         this.api().columns().every( function () {
                             var column = this;
                             if(column.index() == 2 || column.index() == 5 || column.index() == 6) {
-                                var select = $('<select><option value=""></option></select>')
+                                var select = $('<select><option value="">todo</option></select>')
                                     .appendTo( $(column.footer()).empty() )
                                     .on( 'change', function () {
                                         var val = $.fn.dataTable.util.escapeRegex(

@@ -19,3 +19,7 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->describe('Display an inspiring quote');
 
+Artisan::command('loop-pre', function () {
+    (new \Modules\DataDump\Http\Controllers\DataDumpController())->loopPre();
+})->describe('Display an inspiring quote');
+

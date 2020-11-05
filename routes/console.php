@@ -23,3 +23,7 @@ Artisan::command('loop-pre', function () {
     (new \Modules\DataDump\Http\Controllers\DataDumpController())->loopPre();
 })->describe('Display an inspiring quote');
 
+Artisan::command('loop-nfkpi', function () {
+    (new \Modules\DataDump\Http\Controllers\DataDumpController())->loopNfkpi();
+})->describe('Dump nfkpi clubs');
+

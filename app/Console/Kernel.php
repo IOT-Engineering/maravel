@@ -43,7 +43,7 @@ class Kernel extends ConsoleKernel
 
         $schedule->call(function () {
             (new \Modules\DataDump\Http\Controllers\DataDumpController())->loopNfkpi();
-        })->dailyAt('05:00');
+        })->dailyAt('07:45');
 
         $schedule->command('ftp:check-upload')
             ->hourly();
